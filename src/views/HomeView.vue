@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="main">
+    <HelloWorld msg="Hello Vue 3 + TypeScript" />
+  </div>
 </template>
+
+<style lang="scss" scoped>
+.main {
+  color: #2c3e50;
+}
+</style>
