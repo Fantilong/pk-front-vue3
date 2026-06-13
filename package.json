@@ -48,6 +48,7 @@
     "sass": "^1.100.0",
     "start-server-and-test": "^2.1.5",
     "typescript": "~6.0.0",
+    "unplugin-vue-router": "^0.19.2",
     "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1",
     "vitest": "^4.1.4",
