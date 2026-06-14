@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import VueRouter from 'unplugin-vue-router/vite'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -32,6 +33,11 @@ export default defineConfig({
         'vue-router',
         '@vueuse/core',
       ],
+    }),
+    Components({
+      dirs: ['./src/components'],
+      dts: true,
+      directoryAsNamespace: true,
     }),
   ],
   resolve: {

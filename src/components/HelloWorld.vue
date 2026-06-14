@@ -1,6 +1,10 @@
 <script setup lang="ts">
 defineProps<{
-  msg: string
+  msg: {
+    name: string
+    sex: 0 | 1
+    age?: number
+  }
 }>()
 </script>
 
