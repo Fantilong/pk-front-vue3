@@ -14,11 +14,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Profile: typeof import('./src/components/user/Profile.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UserProfile: typeof import('./src/components/user/Profile.vue')['default']
-    UsersProfile: typeof import('./src/components/user/Profile.vue')['default']
   }
 }
 
@@ -26,9 +24,7 @@ declare module 'vue' {
 declare global {
   const ElAvatar: typeof import('element-plus/es')['ElAvatar']
   const HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-  const Profile: typeof import('./src/components/user/Profile.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
   const UserProfile: typeof import('./src/components/user/Profile.vue')['default']
-  const UsersProfile: typeof import('./src/components/user/Profile.vue')['default']
 }

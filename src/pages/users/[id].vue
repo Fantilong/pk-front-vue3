@@ -7,7 +7,7 @@ import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute('/users/[id]')
 const router = useRouter()
-const name = router.currentRoute.value
+const name = router.currentRoute.value.name
 </script>
 
 <style scoped></style>
