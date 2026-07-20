@@ -4,15 +4,17 @@ import { promises as fs } from 'node:fs'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueDevTools from 'vite-plugin-vue-devtools'
+import Layouts from 'vite-plugin-vue-layouts-next'
 import VueRouter from 'unplugin-vue-router/vite'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
+
+import vueDevTools from 'vite-plugin-vue-devtools'
+// import Icons from 'unplugin-icons/vite'
+// import IconsResolver from 'unplugin-icons/resolver'
 // import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 // https://vite.dev/config/
@@ -90,6 +92,10 @@ export default defineConfig({
     //   //   }
     //   // },
     // }),
+    Layouts({
+      layoutsDirs: 'src/layouts',
+      defaultLayout: 'default',
+    }),
   ],
   resolve: {
     alias: {

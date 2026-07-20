@@ -24,3 +24,9 @@ const { x, y, isOutside } = useMouseInElement(target)
 </script>
 
 <style scoped></style>
+
+<route lang="yaml">
+meta:
+  layout: default
+  bgColor: yellow
+</route>

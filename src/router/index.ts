@@ -1,11 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import { routes, handleHotUpdate } from 'vue-router/auto-routes'
-
-// import HomeView from '../views/HomeView.vue'
+import { setupLayouts } from 'virtual:generated-layouts'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: setupLayouts(routes),
 })
 
 if (import.meta.hot) {

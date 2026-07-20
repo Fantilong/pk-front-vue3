@@ -60,6 +60,7 @@
     "unplugin-vue-router": "^0.19.2",
     "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1",
+    "vite-plugin-vue-layouts-next": "^2.1.0",
     "vitest": "^4.1.4",
     "vue-tsc": "^3.2.6"
   },
