@@ -1,0 +1,10 @@
+{
+  "name": "pk-front-vue3",
+  "short_name": "pk-front-vue3",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#42b883",
+  "lang": "en",
+  "scope": "/"
+}

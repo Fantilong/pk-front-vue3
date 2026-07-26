@@ -20,6 +20,8 @@
   <br />
   <input type="text" v-model="value" />
   <button @click="addHandle">Add</button>
+
+  <!-- hello world -->
 </template>
 
 <script setup lang="ts">
