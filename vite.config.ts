@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-import { promises as fs } from 'node:fs'
+// import { promises as fs } from 'node:fs'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -11,6 +11,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import { VitePWA } from 'vite-plugin-pwa'
 
 import vueDevTools from 'vite-plugin-vue-devtools'
 // import Icons from 'unplugin-icons/vite'
@@ -95,6 +96,13 @@ export default defineConfig({
     Layouts({
       layoutsDirs: 'src/layouts',
       defaultLayout: 'default',
+    }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      // injectRegister: 'auto',
+      // devOptions: {
+      //   enabled: true,
+      // },
     }),
   ],
   resolve: {

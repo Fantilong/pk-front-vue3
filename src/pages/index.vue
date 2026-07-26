@@ -14,10 +14,32 @@
   <button class="i-carbon-sun dark:i-carbon-moon" />
   <!-- Twemoji of laugh, turns to tear on hovering -->
   <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
+
+  <ReloadPrompt />
+
+  <br />
 </template>
 
 <script setup lang="ts">
-// import { RouterLink } from 'vue-router'
+import { registerSW } from 'virtual:pwa-register'
+
+onMounted(() => {
+  registerSW({
+    immediate: true,
+    onRegisteredSW(swScriptUrl, registration) {
+      setInterval(() => {
+        console.log('onRegisteredSW', swScriptUrl)
+        registration && registration?.update()
+      }, 5000)
+    },
+    // onNeedRefresh() {
+    //   console.log('need refresh')
+    // },
+    // onOfflineReady() {
+    //   console.log('onOfflineReady')
+    // },
+  })
+})
 
 const target = ref<HTMLElement | null>(null)
 const { x, y, isOutside } = useMouseInElement(target)

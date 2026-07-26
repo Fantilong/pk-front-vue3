@@ -26,7 +26,8 @@
     "types": [
       "element-plus/global",
       "unplugin-icons/types/vue",
-      "vite-plugin-vue-layouts-next/client"
+      "vite-plugin-vue-layouts-next/client",
+      "vite-plugin-pwa/client"
     ]
   }
 }
