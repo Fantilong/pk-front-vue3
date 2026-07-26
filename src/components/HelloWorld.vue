@@ -6,10 +6,17 @@ defineProps<{
     age?: number
   }
 }>()
+
+const emits = defineEmits<{ click: [id?: number] }>()
+
+const handleClick = () => {
+  emits('click', 123)
+}
 </script>
 
 <template>
   <div class="greetings">{{ msg }}</div>
+  <button @click="handleClick">click</button>
 </template>
 
 <style scoped></style>

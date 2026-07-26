@@ -18,11 +18,18 @@
   <ReloadPrompt />
 
   <br />
+  <input type="text" v-model="value" />
+  <button @click="addHandle">Add</button>
 </template>
 
 <script setup lang="ts">
 import { registerSW } from 'virtual:pwa-register'
 
+const value = defineModel('value', { type: Number, default: 0 })
+
+const addHandle = () => {
+  value.value = Number(value.value) + 1
+}
 onMounted(() => {
   registerSW({
     immediate: true,
