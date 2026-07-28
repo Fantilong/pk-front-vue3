@@ -1,14 +1,15 @@
 <template>
-  <div :style="`background: ${useRouter().currentRoute.value.meta.bgColor};`">
-    default layout
-    <div class="next-page">
-      <RouterView />
-    </div>
+  <div class="flex">
+    <router-link to="/">产品</router-link>
+    <a href="https://www.imooc.com" target="_blank">社区</a>
+    <router-link to="/study">学习</router-link>
+    <router-link to="/about">关于</router-link>
   </div>
+  <RouterView />
+
+  <div class="footer">footer</div>
 </template>
 
-<script setup lang="ts">
-import { useRouter } from 'vue-router'
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

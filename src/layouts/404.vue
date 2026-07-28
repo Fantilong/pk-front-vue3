@@ -1,5 +1,5 @@
 <template>
-  <div>about layout <RouterView /></div>
+  <div>404.vue</div>
 </template>
 
 <script setup lang="ts"></script>
