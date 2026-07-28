@@ -30,13 +30,6 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/(admin)/dashboard': RouteRecordInfo<
-      '/(admin)/dashboard',
-      '/dashboard',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
     '/[...path]': RouteRecordInfo<
       '/[...path]',
       '/:path(.*)',
@@ -47,34 +40,6 @@ declare module 'vue-router/auto-routes' {
     '/about': RouteRecordInfo<
       '/about',
       '/about',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/users/': RouteRecordInfo<
-      '/users/',
-      '/users',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/users/[id]': RouteRecordInfo<
-      '/users/[id]',
-      '/users/:id',
-      { id: ParamValue<true> },
-      { id: ParamValue<false> },
-      | never
-    >,
-    '/users/user_[id]': RouteRecordInfo<
-      '/users/user_[id]',
-      '/users/user_:id',
-      { id: ParamValue<true> },
-      { id: ParamValue<false> },
-      | never
-    >,
-    '/users.create': RouteRecordInfo<
-      '/users.create',
-      '/users/create',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -98,12 +63,6 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/(admin)/dashboard.vue': {
-      routes:
-        | '/(admin)/dashboard'
-      views:
-        | never
-    }
     'src/pages/[...path].vue': {
       routes:
         | '/[...path]'
@@ -113,30 +72,6 @@ declare module 'vue-router/auto-routes' {
     'src/pages/about.vue': {
       routes:
         | '/about'
-      views:
-        | never
-    }
-    'src/pages/users/index.vue': {
-      routes:
-        | '/users/'
-      views:
-        | never
-    }
-    'src/pages/users/[id].vue': {
-      routes:
-        | '/users/[id]'
-      views:
-        | never
-    }
-    'src/pages/users/user_[id].vue': {
-      routes:
-        | '/users/user_[id]'
-      views:
-        | never
-    }
-    'src/pages/users.create.vue': {
-      routes:
-        | '/users.create'
       views:
         | never
     }
