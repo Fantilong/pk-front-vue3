@@ -14,6 +14,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Menu: typeof import('./src/components/Menu.vue')['default']
     ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -25,6 +26,7 @@ declare module 'vue' {
 declare global {
   const ElAvatar: typeof import('element-plus/es')['ElAvatar']
   const HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+  const Menu: typeof import('./src/components/Menu.vue')['default']
   const ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
