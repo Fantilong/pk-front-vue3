@@ -12,6 +12,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Container: typeof import('./src/components/Container.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Menu: typeof import('./src/components/Menu.vue')['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const Container: typeof import('./src/components/Container.vue')['default']
   const ElAvatar: typeof import('element-plus/es')['ElAvatar']
   const HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
   const Menu: typeof import('./src/components/Menu.vue')['default']
