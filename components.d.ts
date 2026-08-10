@@ -19,6 +19,7 @@ declare module 'vue' {
     ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Swiper: typeof import('./src/components/Swiper.vue')['default']
     UserProfile: typeof import('./src/components/user/Profile.vue')['default']
   }
 }
@@ -32,5 +33,6 @@ declare global {
   const ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
+  const Swiper: typeof import('./src/components/Swiper.vue')['default']
   const UserProfile: typeof import('./src/components/user/Profile.vue')['default']
 }

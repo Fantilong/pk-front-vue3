@@ -28,6 +28,7 @@
       "unplugin-icons/types/vue",
       "vite-plugin-vue-layouts-next/client",
       "vite-plugin-pwa/client"
-    ]
+    ],
+    "noImplicitAny": false // Allow `any` type for now, as some dependencies are not typed yet.
   }
 }
