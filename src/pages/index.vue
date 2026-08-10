@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Swiper :items="items" :swiper-height="70"></Swiper>
+    <Swiper :items="items" height="h-70"></Swiper>
+    <Card :image="bg" image-type="avatar" title="title2" sub-title="subTitle1" border></Card>
   </div>
 </template>
 
