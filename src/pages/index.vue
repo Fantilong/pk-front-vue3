@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Swiper :items="items" height="h-70"></Swiper>
+    <Swiper :items="items" :height="36 * store.rate + 'rem'"></Swiper>
     <Card :image="bg" image-type="avatar" title="title2" sub-title="subTitle1" border></Card>
   </div>
 </template>
@@ -9,6 +9,9 @@
 import { registerSW } from 'virtual:pwa-register'
 import type { SwiperItemType } from '@/components/types'
 import bg from '@/assets/images/bg.png'
+import { useThemeStore } from '@/stores/useThemeStore'
+
+const store = useThemeStore()
 
 const items: SwiperItemType[] = [
   {

@@ -1,6 +1,7 @@
 <template>
   <swiper
-    :class="height"
+    :class="getClassAndStyle(props.height).class"
+    :style="getClassAndStyle(props.height).style"
     :modules="modules"
     :slides-per-view="1"
     :space-between="0"
@@ -13,9 +14,9 @@
       <slot :item="item">
         <div class="s_c-bg-img" :style="{ backgroundImage: `url(${item.image})` }">
           <Container class="h-full">
-            <div class="flex flex-col justify-center items-start">
-              <p class="text-4xl font-bold text-white">{{ item.title }}</p>
-              <p class="text-lg text-gray-100 pt-4 pb-4">{{ item.subTitle }}</p>
+            <div class="flex flex-col justify-center items-start lt-sm:px-4">
+              <p class="text-xl sm:text-4xl font-bold text-white">{{ item.title }}</p>
+              <p class="text-sm sm:text-lg text-gray-100 pt-4 pb-4">{{ item.subTitle }}</p>
             </div>
           </Container>
         </div>
@@ -46,7 +47,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-defineProps({
+const props = defineProps({
   items: {
     type: Array as PropType<Array<SwiperItemType>>,
     default: () => [],
@@ -56,6 +57,16 @@ defineProps({
     default: 'h-80',
   },
 })
+
+function getClassAndStyle(str: string) {
+  // props.height
+  // 如果height的值包含rem,em,px，则返回 {string: str, class: ''}
+  // 如果height的值包含h-，则返回 {string: '', class: str}
+  return {
+    style: /(rem|em|px)/.test(props.height) ? { height: str } : {},
+    class: /h-/.test(props.height) ? str : '',
+  }
+}
 
 const modules = [Navigation, Pagination]
 
