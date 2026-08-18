@@ -22,6 +22,13 @@ defineProps({
 .item {
   @apply relative text-white text-xl px-8 py-2 cursor-pointer font-300 lt-sm:self-start;
 
+  &.router-link-active {
+    @apply text-main font-500;
+    &:after {
+      @apply content-[''] absolute bg-main! w-8 h-[1px] bottom-0 left-[calc(50%-1rem)];
+    }
+  }
+
   &:hover {
     @apply hover:font-500;
     &:after {
