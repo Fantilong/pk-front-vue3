@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div :class="['flex', { 'flex-col': align === 'vertical' }]">
     <router-link class="item" to="/">产品</router-link>
     <a class="item" href="https://www.imooc.com" target="_blank">社区</a>
     <router-link class="item" to="/study">学习</router-link>
@@ -7,12 +7,20 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { PropType } from 'vue'
+
+defineProps({
+  align: {
+    type: String as PropType<'vertical' | 'horizontal'>,
+  },
+})
+</script>
 
 <style scoped lang="scss">
 // method1: 使用transformer
 .item {
-  @apply relative text-white text-xl px-8 py-2 cursor-pointer font-300;
+  @apply relative text-white text-xl px-8 py-2 cursor-pointer font-300 lt-sm:self-start;
 
   &:hover {
     @apply hover:font-500;

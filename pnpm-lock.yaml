@@ -54,6 +54,9 @@ importers:
       '@unocss/transformer-directives':
         specifier: ^66.7.5
         version: 66.7.5
+      '@unocss/transformer-variant-group':
+        specifier: ^66.7.5
+        version: 66.7.5
       '@vitejs/plugin-vue':
         specifier: ^6.0.6
         version: 6.0.7(vite@8.0.16(@types/node@24.13.1)(esbuild@0.28.1)(jiti@2.7.0)(sass@1.100.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3))
@@ -1962,6 +1965,9 @@ packages:
 
   '@unocss/transformer-variant-group@66.7.2':
     resolution: {integrity: sha512-CO0CoYRn96wLm+cIICuNrv96cfzEkBHc/OmTYcHzlheyZRfGWPWlPpazMr2rlm5bve986akAxe2HSBqdaRf04w==}
+
+  '@unocss/transformer-variant-group@66.7.5':
+    resolution: {integrity: sha512-iDmP3mM8J+IxuQf5Uh33zsi528xnGxTpKRJ0c+LCrqBTTkR2tZr4aCzNmJ0g29Js2yEOsyNXRRc8BNTuvgn0AA==}
 
   '@unocss/vite@66.7.2':
     resolution: {integrity: sha512-KZL8LFNcoOjAaF8AKSUJznxrjcmuQKPSAmwvndL5RjEWtbyunV66YvOuoBPN3F0tR7MhY5NWKJjwmaYyetcM1Q==}
@@ -6669,6 +6675,10 @@ snapshots:
   '@unocss/transformer-variant-group@66.7.2':
     dependencies:
       '@unocss/core': 66.7.2
+
+  '@unocss/transformer-variant-group@66.7.5':
+    dependencies:
+      '@unocss/core': 66.7.5
 
   '@unocss/vite@66.7.2(vite@8.0.16(@types/node@24.13.1)(esbuild@0.28.1)(jiti@2.7.0)(sass@1.100.0)(terser@5.49.0)(yaml@2.9.0))':
     dependencies:

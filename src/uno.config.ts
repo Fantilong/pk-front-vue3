@@ -1,5 +1,5 @@
 import { defineConfig, presetWind4, presetIcons } from 'unocss'
-import { transformerDirectives } from 'unocss'
+import { transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
   // methods2: shortcurs 通常用于设置全局经常要使用的样式
@@ -18,5 +18,5 @@ export default defineConfig({
       },
     }),
   ],
-  transformers: [transformerDirectives()],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
 })
