@@ -20,9 +20,11 @@
     </Container>
   </div>
   <RouterView />
-  <div class="h-[4000px]"></div>
+  <div class="h-[40px]"></div>
   <div class="footer">
-    <div class="mobile-hide">default footer</div>
+    <div class="mobile-hide">
+      <DefaultFooter></DefaultFooter>
+    </div>
     <div class="hidden mobile">mobile-footer</div>
   </div>
 </template>

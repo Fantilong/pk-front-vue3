@@ -14,6 +14,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Card: typeof import('./src/components/Card.vue')['default']
     Container: typeof import('./src/components/Container.vue')['default']
+    DefaultFooter: typeof import('./src/components/DefaultFooter.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Menu: typeof import('./src/components/Menu.vue')['default']
@@ -29,6 +30,7 @@ declare module 'vue' {
 declare global {
   const Card: typeof import('./src/components/Card.vue')['default']
   const Container: typeof import('./src/components/Container.vue')['default']
+  const DefaultFooter: typeof import('./src/components/DefaultFooter.vue')['default']
   const ElAvatar: typeof import('element-plus/es')['ElAvatar']
   const HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
   const Menu: typeof import('./src/components/Menu.vue')['default']

@@ -8,8 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue'
-
 defineProps({
   align: {
     type: String as PropType<'vertical' | 'horizontal'>,
