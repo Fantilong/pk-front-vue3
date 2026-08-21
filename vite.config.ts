@@ -13,6 +13,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { VitePWA } from 'vite-plugin-pwa'
 import { viteMockServe } from 'vite-plugin-mock'
+import Markdown from 'unplugin-vue-markdown/vite'
 
 import vueDevTools from 'vite-plugin-vue-devtools'
 // import Icons from 'unplugin-icons/vite'
@@ -22,8 +23,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    VueRouter({}),
-    vue(),
+    VueRouter({ extensions: ['.vue', '.md'] }),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     vueJsx(),
     vueDevTools(),
     UnoCSS({
@@ -52,6 +55,8 @@ export default defineConfig({
       dirs: ['./src/components'],
       dts: true,
       directoryAsNamespace: true,
+      extensions: ['vue', 'md'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       resolvers: [
         ElementPlusResolver(),
         // IconsResolver({
@@ -109,6 +114,9 @@ export default defineConfig({
     viteMockServe({
       mockPath: 'mock',
       enable: false,
+    }),
+    Markdown({
+      /* options */
     }),
   ],
   resolve: {

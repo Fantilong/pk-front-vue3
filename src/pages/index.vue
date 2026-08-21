@@ -30,6 +30,7 @@
         </a>
       </div>
     </Container>
+    <HelloWorld></HelloWorld>
   </div>
 </template>
 
