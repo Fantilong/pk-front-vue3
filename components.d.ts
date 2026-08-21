@@ -15,14 +15,12 @@ declare module 'vue' {
     Card: typeof import('./src/components/Card.vue')['default']
     Container: typeof import('./src/components/Container.vue')['default']
     DefaultFooter: typeof import('./src/components/DefaultFooter.vue')['default']
-    ElAvatar: typeof import('element-plus/es')['ElAvatar']
     HelloWorld: typeof import('./src/components/HelloWorld.md')['default']
     Menu: typeof import('./src/components/Menu.vue')['default']
     ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Swiper: typeof import('./src/components/Swiper.vue')['default']
-    UserProfile: typeof import('./src/components/user/Profile.vue')['default']
   }
 }
 
@@ -31,12 +29,10 @@ declare global {
   const Card: typeof import('./src/components/Card.vue')['default']
   const Container: typeof import('./src/components/Container.vue')['default']
   const DefaultFooter: typeof import('./src/components/DefaultFooter.vue')['default']
-  const ElAvatar: typeof import('element-plus/es')['ElAvatar']
   const HelloWorld: typeof import('./src/components/HelloWorld.md')['default']
   const Menu: typeof import('./src/components/Menu.vue')['default']
   const ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
   const Swiper: typeof import('./src/components/Swiper.vue')['default']
-  const UserProfile: typeof import('./src/components/user/Profile.vue')['default']
 }

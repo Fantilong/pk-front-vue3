@@ -14,6 +14,8 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { VitePWA } from 'vite-plugin-pwa'
 import { viteMockServe } from 'vite-plugin-mock'
 import Markdown from 'unplugin-vue-markdown/vite'
+import prism from 'markdown-it-prism'
+import { unheadVueComposablesImports } from '@unhead/vue'
 
 import vueDevTools from 'vite-plugin-vue-devtools'
 // import Icons from 'unplugin-icons/vite'
@@ -48,6 +50,7 @@ export default defineConfig({
         VueRouterAutoImports,
         '@vueuse/core',
         'pinia',
+        unheadVueComposablesImports,
       ],
       // resolvers: [ElementPlusResolver()],
     }),
@@ -116,12 +119,26 @@ export default defineConfig({
       enable: false,
     }),
     Markdown({
-      /* options */
+      // markdownOptions: {},
+      headEnabled: true,
+      markdownUses: [prism],
     }),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  build: {
+    rollupOptions: {
+      // TODO: Remove when updating vueuse beyond v14.3.0
+      onwarn(warning, warn) {
+        if (warning.code === 'INVALID_ANNOTATION') {
+          return
+        }
+
+        warn(warning)
+      },
     },
   },
 })

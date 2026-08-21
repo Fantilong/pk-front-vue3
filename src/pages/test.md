@@ -1,8 +1,19 @@
+---
+title: My Cool App
+meta:
+  - name: description
+    content: Hello World
+---
+
 <Container class="flex flex-col">
 
 # pk-front-vue3
 
 This template should help get you started developing with Vue 3 in Vite.
+
+![RUNOOB 图标](https://static.jyshare.com/images/runoob-logo.png)
+
+![RUNOOB 图标](https://static.jyshare.com/images/runoob-logo.png 'RUNOOB')
 
 ## Recommended IDE Setup
 
