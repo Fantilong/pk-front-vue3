@@ -1,6 +1,8 @@
 // test.ts
 
 import { MockMethod, MockConfig } from 'vite-plugin-mock'
+import path from 'path'
+import fs from 'fs'
 export default [
   {
     url: '/api/get',
@@ -39,6 +41,24 @@ export default [
       res.setHeader('Content-Type', 'text/plain')
       res.statusCode = 200
       res.end(`hello, ${reqbody}`)
+    },
+  },
+  {
+    url: '/api/image/:imageName',
+    method: 'get',
+    rawResponse: async (_req, res) => {
+      const imageName = _req.url.replace('/api/image/', '')
+      const imagePath = path.join(__dirname, 'assets', imageName)
+      debugger
+
+      fs.readFile(imagePath, (err, data) => {
+        if (err) {
+        } else {
+          res.setHeader('Content-Type', 'image/jpeg')
+          res.statusCode = 200
+          res.end(data)
+        }
+      })
     },
   },
 ] as MockMethod[]

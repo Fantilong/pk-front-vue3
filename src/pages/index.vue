@@ -76,7 +76,7 @@ const projects = [
 
 const items: SwiperItemType[] = [
   {
-    image: bg,
+    image: '/api/image/about.png',
     title: '标题1',
     subTitle: '副标题1',
     desc: '描述1',
