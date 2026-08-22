@@ -1,6 +1,6 @@
 <template>
   <div>
-    study.vue
+    study/index.vue
     {{ query.id }}
   </div>
 </template>

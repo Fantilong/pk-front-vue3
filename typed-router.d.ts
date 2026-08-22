@@ -44,6 +44,15 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/study': RouteRecordInfo<
+      '/study',
+      '/study',
+      Record<never, never>,
+      Record<never, never>,
+      | '/study/'
+      | '/study/[id]'
+      | '/study/test'
+    >,
     '/study/': RouteRecordInfo<
       '/study/',
       '/study',
@@ -58,9 +67,9 @@ declare module 'vue-router/auto-routes' {
       { id: ParamValue<false> },
       | never
     >,
-    '/test': RouteRecordInfo<
-      '/test',
-      '/test',
+    '/study/test': RouteRecordInfo<
+      '/study/test',
+      '/study/test',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -96,6 +105,15 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'src/pages/study.vue': {
+      routes:
+        | '/study'
+        | '/study/'
+        | '/study/[id]'
+        | '/study/test'
+      views:
+        | 'default'
+    }
     'src/pages/study/index.vue': {
       routes:
         | '/study/'
@@ -108,9 +126,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/test.md': {
+    'src/pages/study/test.md': {
       routes:
-        | '/test'
+        | '/study/test'
       views:
         | never
     }
