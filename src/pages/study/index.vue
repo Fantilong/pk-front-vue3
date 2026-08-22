@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="study">
     study/index.vue
     {{ query.id }}
   </div>
